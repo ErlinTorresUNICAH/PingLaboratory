@@ -1,0 +1,31 @@
+﻿@model List<Dispositivo>
+
+@{
+    ViewBag.Title = "Resultados de Escaneo";
+}
+
+<h2>Resultados de Escaneo</h2>
+
+<table>
+    <tr>
+        <th>Dirección IP</th>
+        <th>Estado</th>
+    </tr>
+    @foreach (var dispositivo in Model)
+    {
+        <tr>
+            <td>@dispositivo.DireccionIP</td>
+            
+            <td>
+                @if (@dispositivo.Estado)
+                {
+                    <span class="text-success"><i class="bi bi-reception-4"></i></span>
+                }
+                else
+                {
+                    <span class="text-danger"><i class="bi bi-reception-0"></i></span>
+                }
+            </td>
+        </tr>
+    }
+</table>

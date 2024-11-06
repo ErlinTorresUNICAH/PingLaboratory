@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Escanear Red";
+}
+
+<h2>Escanear Red</h2>
+
+@using (Html.BeginForm("EscanearRed", "Ping", FormMethod.Post))
+{
+    <label for="rangoIP">Rango de IP:</label>
+    <input type="text" id="rangoIP" name="rangoIP" placeholder="Ejemplo: 192.168.1.0/24" />
+    <input type="submit" value="Escanear" />
+}
